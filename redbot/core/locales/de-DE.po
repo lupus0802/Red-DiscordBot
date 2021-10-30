@@ -17,11 +17,11 @@ msgstr ""
 
 #: redbot/core/bank.py:1019
 msgid "Can't pay for this command in DM without a global bank."
-msgstr "Dieser Befehl kann ohne eine globale Bank nicht in DM bezahlt werden."
+msgstr "Dieser Befehl kann ohne eine globale Bank nicht in DM ausgeführt werden."
 
 #: redbot/core/bank.py:1026
 msgid "You need at least {cost} {currency} to use this command."
-msgstr "Sie benötigen mindestens {cost} {currency} um diesen Befehl zu verwenden."
+msgstr "Du benötigst mindestens {cost} {currency} um diesen Befehl zu verwenden."
 
 #: redbot/core/cog_manager.py:316
 #, docstring
@@ -34,7 +34,7 @@ msgid "\n"
 "        Lists current cog paths in order of priority.\n"
 "        "
 msgstr "\n"
-"        Listet aktuelle Cog Pfade nach Priorität sortiert auf.\n"
+"        Listet aktuelle Cog Pfade (nach Priorität sortiert) auf.\n"
 "        "
 
 #: redbot/core/cog_manager.py:333
@@ -157,7 +157,7 @@ msgid "\n"
 "    These commands come loaded with every Red bot, and cover some of the most basic usage of the bot.\n"
 "    "
 msgstr "\n"
-"    Der Basis Cog hat viele Befehle die sich auf Grundfunktionen beziehen.\n\n"
+"    Das "Core" Cog hat viele Befehle die sich auf Grundfunktionen beziehen.\n\n"
 "   Diese Befehle sind bei jedem Red Bot standardmässig geladen und decken die Grundlegende Nutzung des Bots ab.\n"
 "    "
 
@@ -179,8 +179,8 @@ msgstr "Zeigt Informationen über [botname].\n\n"
 msgid "This bot is an instance of [Red, an open source Discord bot]({}) created by [Twentysix]({}) and [improved by many]({}).\n\n"
 "Red is backed by a passionate community who contributes and creates content for everyone to enjoy. [Join us today]({}) and help us improve!\n\n"
 "(c) Cog Creators"
-msgstr "Dieser Bot ist eine Instanz von [Red, ein open source Discord bot]({}) erstellt von [Twentysix]({}) und [von vielen verbessert]({}).\n\n"
-"Red wird von einer aktiven Community unterstützt, welche sich am Code beteiligt und Inhalte für andere erstellt. [Werde auch du ein Teil der Community]({}) und hilf uns noch besser zu werden!\n\n"
+msgstr "\n\n"
+"Credits to Cog Creators.\n\n"
 "(C) Cog Creators"
 
 #: redbot/core/core_commands.py:456
@@ -193,7 +193,7 @@ msgstr "Diese Instanz gehört"
 
 #: redbot/core/core_commands.py:461
 msgid "Red version"
-msgstr "Red Version"
+msgstr "Version"
 
 #: redbot/core/core_commands.py:464 redbot/core/core_commands.py:520
 msgid "Yes, {version} is available."
@@ -213,19 +213,17 @@ msgstr "Über diese Instanz"
 
 #: redbot/core/core_commands.py:472
 msgid "About Red"
-msgstr "Über Red"
+msgstr "-"
 
 #: redbot/core/core_commands.py:475 redbot/core/core_commands.py:533
 msgid "Bringing joy since 02 Jan 2016 (over {} days ago!)"
-msgstr "Freude seit 02. Jan 2016 (vor {} Tagen!)"
+msgstr "-)"
 
 #: redbot/core/core_commands.py:483
 msgid "This bot is an instance of Red, an open source Discord bot (1) created by Twentysix (2) and improved by many (3).\n\n"
 "Red is backed by a passionate community who contributes and creates content for everyone to enjoy. Join us today (4) and help us improve!\n\n"
 "(c) Cog Creators"
-msgstr "Dieser Bot ist eine Instanz von Rot, einem Open-Source-Discord Bot (1) erstellt von Twentysix (2) und verbessert von vielen (3).\n\n"
-"Red wird von einer leidenschaftlichen Community unterstützt, welche sich am Code beteiligt und Inhalte schafft, die jeder genießen kann. Werde auch du ein Teil der Cimmunity (4) und huns noch besser zu werden!\n\n"
-"(c) Cog Creators"
+msgstr "Copy Rright Cog Creators"
 
 #: redbot/core/core_commands.py:494
 msgid "Instance owned by team: [{owner}]\n"
@@ -339,7 +337,7 @@ msgstr "Ich muss in der Lage sein Dateien anzuhängen (versuche es in den Direkt
 
 #: redbot/core/core_commands.py:630
 msgid "This instance does not appear to have any 3rd-party extensions loaded."
-msgstr "Diese Instanz scheint keine 3rd-party Erweiterung geladen zu haben."
+msgstr "Diese Instanz scheint keine Erweiterung geladen zu haben."
 
 #: redbot/core/core_commands.py:650
 msgid "3rd party End User Data statements"
