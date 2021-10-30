@@ -23,7 +23,7 @@ msgid "This cog contains commands used for \"cleaning up\" (deleting) messages.\
 "    Messages older than two weeks cannot be mass deleted.\n"
 "    This is a limitation of the API.\n"
 "    "
-msgstr ""
+msgstr "Bulk delete Erweiterung. "
 
 #: redbot/cogs/cleanup/cleanup.py:54
 msgid "Are you sure you want to delete {number} messages? (y/n)"
@@ -36,7 +36,7 @@ msgstr "Abgebrochen."
 #: redbot/cogs/cleanup/cleanup.py:144
 #, docstring
 msgid "Base command for deleting messages."
-msgstr ""
+msgstr "Basis Command um Nachrichten zu löschen."
 
 #: redbot/cogs/cleanup/cleanup.py:154
 #, docstring
@@ -48,7 +48,12 @@ msgid "Delete the last X messages matching the specified text in the current cha
 "        - `<number>` The max number of messages to cleanup. Must be a positive integer.\n"
 "        - `<delete_pinned>` Whether to delete pinned messages or not. Defaults to False\n"
 "        "
-msgstr ""
+msgstr "Lösche die letzten X Nachrichten die zu dem eingegebenen Text passen.\n\n"
+"	 	Beispiel:\n"
+"	 		- `[p]cleanup text \"test\" 5`\n\n"
+"		**Argumente:**\n\n"
+"	 	- `<number>` Maximale Anztahl der Nachrichten (Ist eine Zahl und muss positiv sein.)\n"
+"		- `<delete_pinned>` Legt fest, ob gepinnte Nachrichten auch gelöscht werden sollen. Ist `true` oder `false`, default auf false.\n"
 
 #: redbot/cogs/cleanup/cleanup.py:209
 #, docstring
@@ -61,7 +66,15 @@ msgid "Delete the last X messages from a specified user in the current channel.\
 "        - `<number>` The max number of messages to cleanup. Must be a positive integer.\n"
 "        - `<delete_pinned>` Whether to delete pinned messages or not. Defaults to False\n"
 "        "
-msgstr ""
+msgstr "Lösche die letzten X Nachrichten von einem Nutzer.\n\n"
+"		Beispiele:\n"
+"            - `[p]cleanup user @lupus0802 2`\n"
+"            - `[p]cleanup user Red 6`\n\n"
+"		**Argumente:\n\n**
+"		- `<user>` Legt den Nutzer, dessen Nachrichten gelöscht werden sollen, fest.\n"
+"	 	- `<number>` Maximale Anztahl der Nachrichten (Ist eine Zahl und muss positiv sein.)\n"
+"		- `<delete_pinned>` Legt fest, ob gepinnte Nachrichten auch gelöscht werden sollen. Ist `true` oder `false`, default auf false.\n"
+
 
 #: redbot/cogs/cleanup/cleanup.py:282
 #, docstring
@@ -74,7 +87,11 @@ msgid "Delete all messages after a specified message.\n\n"
 "        - `<message_id>` The id of the message to cleanup after. This message won't be deleted.\n"
 "        - `<delete_pinned>` Whether to delete pinned messages or not. Defaults to False\n"
 "        "
-msgstr ""
+msgstr "Löscht alle Nachrichten nach der angegebenen Nachrichten-ID\n\n"
+"		Wenn du auf eine Nachricht antwortest, wird diese als die angegebene Nachricht gewertet.\n\n"
+"		**Argumente:**\n\n"
+"		- `<message_id>` Die ID der Nachricht nach der alles gelöscht werden soll. (Die angegebene Nachricht wird nicht gelöscht)\n"
+"		- `<delete_pinned>` Legt fest, ob gepinnte Nachrichten auch gelöscht werden sollen. Ist `true` oder `false`, default auf false.\n"
 
 #: redbot/cogs/cleanup/cleanup.py:303 redbot/cogs/cleanup/cleanup.py:357
 msgid "Message not found."
@@ -92,7 +109,13 @@ msgid "Deletes X messages before the specified message.\n\n"
 "        - `<number>` The max number of messages to cleanup. Must be a positive integer.\n"
 "        - `<delete_pinned>` Whether to delete pinned messages or not. Defaults to False\n"
 "        "
-msgstr ""
+msgstr "Lösche X Nachrichten vor der angegebenen Nachrichten-ID.\n"
+"		Wenn du auf eine Nachricht antwortest, wird diese als die angegebene Nachricht gewertet.\n\"
+"		**Argumente:**\n\n"
+"		- `<message_id>` Die ID der Nachricht vor der alles gelöscht werden soll. (Die angegebene Nachricht wird nicht gelöscht)\n"
+"	 	- `<number>` Maximale Anztahl der Nachrichten (Ist eine Zahl und muss positiv sein.)\n"
+"		- `<delete_pinned>` Legt fest, ob gepinnte Nachrichten auch gelöscht werden sollen. Ist `true` oder `false`, default auf false.\n"
+
 
 #: redbot/cogs/cleanup/cleanup.py:390
 #, docstring
@@ -105,7 +128,15 @@ msgid "Delete the messages between Message One and Message Two, providing the me
 "        - `<two>` The id of the message to cleanup before. This message won't be deleted.\n"
 "        - `<delete_pinned>` Whether to delete pinned messages or not. Defaults to False\n"
 "        "
-msgstr ""
+msgstr "Lösche alle Nachrichten zwischen Nachrichten-ID 1 und Nachrichten-ID 2\n\n"
+"        Beispiel:\n"
+"            - `[p]cleanup between 123456789123456789 987654321987654321`\n\n"
+"		**Argumente:**\n\n
+"		- `<one>` Die Nachrichten-ID nach der alle Nachrichten gelöscht werden.\n"
+"		- `<two>` Die Nachrichten-ID bevor alle Nachrichten gelöscht werden.\n"
+"		- `<delete_pinned>` Legt fest, ob gepinnte Nachrichten auch gelöscht werden sollen. Ist `true` oder `false`, default auf false.\n"
+
+
 
 #: redbot/cogs/cleanup/cleanup.py:438
 #, docstring
@@ -116,7 +147,13 @@ msgid "Delete the last X messages in the current channel.\n\n"
 "        - `<number>` The max number of messages to cleanup. Must be a positive integer.\n"
 "        - `<delete_pinned>` Whether to delete pinned messages or not. Defaults to False\n"
 "        "
-msgstr ""
+msgstr "Lösche die letzten X Nachrichten in dem momentanen Channel.\n\n"
+"		Beispiel:\n"
+"			- `[p]cleanup messages 26`\n\n"
+"		**Argumente:**\n\n"
+"	 	- `<number>` Maximale Anztahl der Nachrichten (Ist eine Zahl und muss positiv sein.)\n"
+"		- `<delete_pinned>` Legt fest, ob gepinnte Nachrichten auch gelöscht werden sollen. Ist `true` oder `false`, default auf false.\n"
+
 
 #: redbot/cogs/cleanup/cleanup.py:476
 #, docstring
@@ -126,7 +163,11 @@ msgid "Clean up command messages and messages from the bot in the current channe
 "        - `<number>` The max number of messages to cleanup. Must be a positive integer.\n"
 "        - `<delete_pinned>` Whether to delete pinned messages or not. Defaults to False\n"
 "        "
-msgstr ""
+msgstr "Löscht Commands und Nachrichten von diesem BOT in dem momentanen Channel.\n\n"
+"		**Argumente:**\n\n"
+"	 	- `<number>` Maximale Anztahl der Nachrichten (Ist eine Zahl und muss positiv sein.)\n"
+"		- `<delete_pinned>` Legt fest, ob gepinnte Nachrichten auch gelöscht werden sollen. Ist `true` oder `false`, default auf false.\n"
+
 
 #: redbot/cogs/cleanup/cleanup.py:564
 #, docstring
@@ -151,7 +192,10 @@ msgid "Deletes duplicate messages in the channel from the last X messages and ke
 "        **Arguments:**\n\n"
 "        - `<number>` The number of messages to check for duplicates. Must be a positive integer.\n"
 "        "
-msgstr ""
+msgstr "Löscht doppelte Nachrichten in dem Channel von den letzten X Nachrichten und läst jeweis eine über.\n\n"
+"		50 Nachrichten normalerweise.\n\n"
+"	 	- `<number>` Maximale Anztahl der Nachrichten zum Überorpfen (Ist eine Zahl und muss positiv sein.)\n"
+
 
 #: redbot/cogs/cleanup/converters.py:17
 msgid "{} doesn't look like a valid message ID."

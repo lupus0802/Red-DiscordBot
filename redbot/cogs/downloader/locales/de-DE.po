@@ -75,7 +75,7 @@ msgstr "Bibliotheken installiert."
 
 #: redbot/cogs/downloader/downloader.py:502
 msgid "Library installed."
-msgstr ""
+msgstr "Bibilothek installiert."
 
 #: redbot/cogs/downloader/downloader.py:505
 msgid "Some libraries failed to install. Please check your logs for a complete list."
@@ -83,7 +83,7 @@ msgstr "Manche Bibliotheken konnten nicht installiert werden. Bitte durchsuche d
 
 #: redbot/cogs/downloader/downloader.py:510
 msgid "The library failed to install. Please check your logs for a complete list."
-msgstr ""
+msgstr "Ein Problem ist aufgetreten."
 
 #: redbot/cogs/downloader/downloader.py:518
 #, docstring
