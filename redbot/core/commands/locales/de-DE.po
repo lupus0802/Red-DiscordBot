@@ -25,7 +25,7 @@ msgstr "`{unit}` ist keine gültige Zeiteinheit für diesen Befehl"
 
 #: redbot/core/commands/converter.py:118
 msgid "The time set is way too high, consider setting something reasonable."
-msgstr ""
+msgstr "Konnte den Befehl nicht ausführen: Time set too high"
 
 #: redbot/core/commands/converter.py:122
 msgid "This amount of time is too large for this command. (Maximum: {maximum})"
@@ -70,11 +70,18 @@ msgid "Maximum characters per page: {page_char_limit}\n"
 "Help shows unusable commands when asked directly: {verify_exists}\n"
 "Delete delay: {delete_delay}\n"
 "React with a checkmark when help is sent via DM: {use_tick}{tagline_info}"
-msgstr ""
+msgstr "Max Anzahl an Zeichen pro Seite: {page_char_limit}\n"
+"Max Seiten (nur aktiv, wenn keine Menüs benutzt werden): {max_pages_in_guild}\n"
+"Menü wird benutzt: {use_menus}\n"
+"Hilfe zeigt versteckte Befehle? {show_hidden}\n"
+"Hilfe zeigt alle Alias'? {show_aliases}\n"
+"Hilfe zeigt nur ausführbare Befehle? {verify_checks}\n"
+"Hilfe Menü wird gelöscht? {delete_delay}\n"
+"Der BOT reagiert, wenn das Menü über Direktnachrichten gesendet wird? {use_tick}{tagline_info}"
 
 #: redbot/core/commands/help.py:274
 msgid "Type {ctx.clean_prefix}help <command> for more info on a command. You can also type {ctx.clean_prefix}help <category> for more info on a category."
-msgstr "Geben Sie {ctx.clean_prefix}help <command> für weitere Informationen zu einem Befehl ein. Sie können auch {ctx.clean_prefix}help <category> für weitere Informationen zu einer Kategorie eingeben."
+msgstr "Wenn du eine Frage hast, melde dich doch im Support!"
 
 #: redbot/core/commands/help.py:318
 msgid "Syntax: {command_signature}"
@@ -82,7 +89,7 @@ msgstr ""
 
 #: redbot/core/commands/help.py:324
 msgid "Aliases"
-msgstr "Aliase"
+msgstr "Alias'"
 
 #: redbot/core/commands/help.py:324
 msgid "Alias"
@@ -94,7 +101,7 @@ msgstr "{aliases} und {number} weitere Aliase."
 
 #: redbot/core/commands/help.py:349
 msgid "{aliases} and one more alias."
-msgstr "{aliases} und ein weiteres Alias."
+msgstr "{aliases} und ein weiterer Alias."
 
 #: redbot/core/commands/help.py:391
 msgid "**__Subcommands:__**"
@@ -153,7 +160,7 @@ msgstr "Befehl *{command_name}* besitzt keinen Unterbefehl mit dem Namen *{not_f
 
 #: redbot/core/commands/help.py:828
 msgid "I couldn't send the help message to you in DM. Either you blocked me or you disabled DMs in this server."
-msgstr "Es konnte keine Hilfe-Nachricht als Direktnachricht zugestellt werden. Entweder ist der Bot blockiert oder Direktnachrichten sind auf diesem Server deaktiviert."
+msgstr "Ich konnte dir keine Direktnachrichten senden (Hast du sie geblockt)?"
 
 #: redbot/core/commands/help.py:867
 #, docstring
