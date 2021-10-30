@@ -40,19 +40,19 @@ msgstr ""
 
 #: redbot/cogs/audio/converters.py:87
 msgid "\"{arg}\" was not found. It must be the ID or complete name of a server which the bot can see."
-msgstr ""
+msgstr "**Fehler:** \"{arg}\" nicht geunden. Dies muss eine ID oder der komplette Name von einem Server sein!"
 
 #: redbot/cogs/audio/converters.py:96 redbot/cogs/audio/converters.py:136
 msgid "\"{arg}\" does not refer to a unique server. Please use the ID for the server you're trying to specify."
-msgstr "\"{arg}\" bezieht sich nicht auf einen eindeutigen Server. Bitte verwenden Sie die ID für den Server, den Sie angeben möchten."
+msgstr "**Fehler:** \"{arg}\" bezieht sich nicht auf einen eindeutigen Server. Bitte verwende die ID für den Server, den du angeben möchten."
 
 #: redbot/cogs/audio/converters.py:127
 msgid "\"{arg}\" was not found. It must be the ID or name or mention a user which the bot can see."
-msgstr "\"{arg}\" wurde nicht gefunden. Es muss die ID oder der Name sein oder einen Benutzer erwähnen, den der Bot sehen kann."
+msgstr "**Fehler:** \"{arg}\" wurde nicht gefunden. Es muss die ID oder der Name sein oder einen Benutzer erwähnen, den der Bot sehen kann."
 
 #: redbot/cogs/audio/converters.py:176
 msgid "Could not match '{}' to a playlist."
-msgstr "Konnte '{}' keiner Playlist zuordnen."
+msgstr "**Fehler:** Konnte '{}' keiner Playlist zuordnen."
 
 #: redbot/cogs/audio/converters.py:241 redbot/cogs/audio/converters.py:263
 #: redbot/cogs/audio/converters.py:283 redbot/cogs/audio/converters.py:368
@@ -60,17 +60,17 @@ msgstr "Konnte '{}' keiner Playlist zuordnen."
 #: redbot/cogs/audio/converters.py:431 redbot/cogs/audio/converters.py:453
 #: redbot/cogs/audio/converters.py:480
 msgid "Nothing"
-msgstr ""
+msgstr "Nichts"
 
 #: redbot/cogs/audio/converters.py:261
 msgid "You cannot use `--guild`"
-msgstr ""
+msgstr "**Fehler:** Du darfst `--guild` nicht benutzen."
 
 #: redbot/cogs/audio/converters.py:402
 msgid "You cannot use `--to-server`"
-msgstr ""
+msgstr "**Fehler:** Du darfst `--to-server` nicht benutzen."
 
 #: redbot/cogs/audio/converters.py:428
 msgid "You cannot use `--from-server`"
-msgstr ""
+msgstr "**Fehler:** Du darfst `--from-server` nicht benutzen."
 

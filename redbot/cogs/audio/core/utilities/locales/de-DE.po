@@ -17,7 +17,7 @@ msgstr ""
 
 #: redbot/cogs/audio/core/utilities/formatting.py:75
 msgid "tracks"
-msgstr "titel"
+msgstr "Titel"
 
 #: redbot/cogs/audio/core/utilities/formatting.py:85
 #: redbot/cogs/audio/core/utilities/formatting.py:275
@@ -27,33 +27,33 @@ msgstr "Seite {page_num}/{total_pages}"
 #: redbot/cogs/audio/core/utilities/formatting.py:96
 #: redbot/cogs/audio/core/utilities/playlists.py:527
 msgid "Connection to Lavalink has failed"
-msgstr "Verbindung zu Lavalink ist fehlgeschlagen"
+msgstr "**Achtung:** Verbindung zu Lavalink ist fehlgeschlagen"
 
 #: redbot/cogs/audio/core/utilities/formatting.py:99
 #: redbot/cogs/audio/core/utilities/player.py:591
 #: redbot/cogs/audio/core/utilities/playlists.py:530
 msgid "Please check your console or logs for details."
-msgstr "Bitte überprüfen Sie Ihre Konsole oder Protokolle für Details."
+msgstr "Bitte überprüfen die Konsole oder Logs."
 
 #: redbot/cogs/audio/core/utilities/formatting.py:107
 #: redbot/cogs/audio/core/utilities/playlists.py:562
 msgid "Connect to a voice channel first."
-msgstr "Verbinde dich zuerst mit einem Sprachkanal."
+msgstr "**Achtung:** Verbinde dich zuerst mit einem Sprachkanal."
 
 #: redbot/cogs/audio/core/utilities/formatting.py:110
 #: redbot/cogs/audio/core/utilities/playlists.py:555
 msgid "Connection to Lavalink has not yet been established."
-msgstr "Verbindung zu Lavalink wurde noch nicht hergestellt."
+msgstr "**Achtung:** Verbindung zu Lavalink wurde noch nicht hergestellt."
 
 #: redbot/cogs/audio/core/utilities/formatting.py:117
 #: redbot/cogs/audio/core/utilities/player.py:441
 #: redbot/cogs/audio/core/utilities/player.py:523
 msgid "Queue size limit reached."
-msgstr "Maximale Warteschlangengröße erreicht."
+msgstr "**Fehler:** Maximale Warteschlangengröße erreicht."
 
 #: redbot/cogs/audio/core/utilities/formatting.py:117
 msgid "Unable To Play Tracks"
-msgstr "Titel können nicht wiedergegeben werden"
+msgstr "**Fehler:** Titel können nicht wiedergegeben werden"
 
 #: redbot/cogs/audio/core/utilities/formatting.py:155
 #: redbot/cogs/audio/core/utilities/player.py:599
@@ -63,12 +63,12 @@ msgstr "Titel eingereiht"
 #: redbot/cogs/audio/core/utilities/formatting.py:170
 #: redbot/cogs/audio/core/utilities/player.py:548
 msgid "This track is not allowed in this server."
-msgstr "Dieser Track ist auf diesem Server nicht erlaubt."
+msgstr "**Fehler:** Dieser Track ist auf diesem Server nicht erlaubt."
 
 #: redbot/cogs/audio/core/utilities/formatting.py:188
 #: redbot/cogs/audio/core/utilities/player.py:570
 msgid "Track exceeds maximum length."
-msgstr "Der Track überschreitet die maximale Länge."
+msgstr "**Fehler:** Der Track überschreitet die maximale Länge."
 
 #: redbot/cogs/audio/core/utilities/formatting.py:203
 #: redbot/cogs/audio/core/utilities/player.py:602
@@ -209,7 +209,7 @@ msgstr "Nichts gefunden."
 #: redbot/cogs/audio/core/utilities/playlists.py:608
 #: redbot/cogs/audio/core/utilities/playlists.py:641
 msgid "Track is not playable."
-msgstr "Track ist nicht abspielbar."
+msgstr "**Fehler:** Track ist nicht abspielbar."
 
 #: redbot/cogs/audio/core/utilities/player.py:271
 #: redbot/cogs/audio/core/utilities/player.py:312
@@ -309,27 +309,27 @@ msgstr "Ungefähre Zeit verbleibend: {seconds}"
 
 #: redbot/cogs/audio/core/utilities/player.py:667
 msgid "The connection was reset while loading the playlist."
-msgstr "Die Verbindung wurde zurückgesetzt beim Laden der Playlist."
+msgstr "**Fehler:** Die Verbindung wurde zurückgesetzt beim Laden der Playlist."
 
 #: redbot/cogs/audio/core/utilities/playlists.py:84
 msgid "You do not have the permissions to manage {name} (`{id}`) [**{scope}**]."
-msgstr "Du hast nicht die Berechtigung {name} (`{id}`) [**{scope} **] zu verwalten."
+msgstr "**Verweigert!** Du hast nicht die Berechtigung {name} (`{id}`) [**{scope} **] zu verwalten."
 
 #: redbot/cogs/audio/core/utilities/playlists.py:102
 msgid "You do not have the permissions to manage that playlist in {guild}."
-msgstr "Du hast nicht die Berechtigung, diese Playlist in {guild} zu verwalten."
+msgstr "**Verweigert!** Du hast nicht die Berechtigung, diese Playlist in {guild} zu verwalten."
 
 #: redbot/cogs/audio/core/utilities/playlists.py:109
 msgid "You do not have the permissions to manage playlist owned by {user}."
-msgstr "Du hast nicht die Berechtigung, die Playlist von {user} zu verwalten."
+msgstr "**Verweigert!** Du hast nicht die Berechtigung, die Playlist von {user} zu verwalten."
 
 #: redbot/cogs/audio/core/utilities/playlists.py:113
 msgid "You do not have the permissions to manage playlists in {scope} scope."
-msgstr "Du hast nicht die Berechtigung, diese Wiedergabeliste im Bereich {scope} zu verwalten."
+msgstr "**Verweigert!** Du hast nicht die Berechtigung, diese Wiedergabeliste im Bereich {scope} zu verwalten."
 
 #: redbot/cogs/audio/core/utilities/playlists.py:117
 msgid "No access to playlist."
-msgstr "Kein Zugriff auf Playlist."
+msgstr "**Verweigert!** Kein Zugriff auf Playlist."
 
 #: redbot/cogs/audio/core/utilities/playlists.py:225
 msgid "{match_count} playlists match {original_input}: Please try to be more specific, or use the playlist ID."
@@ -354,7 +354,7 @@ msgstr "{playlists} Playlists gefunden, welche möchtest du?"
 #: redbot/cogs/audio/core/utilities/playlists.py:278
 #: redbot/cogs/audio/core/utilities/playlists.py:284
 msgid "Too many matches found and you did not select which one you wanted."
-msgstr "Zu viele Treffer wurden gefunden und sie haben nicht ausgewählt, welches Sie wollten."
+msgstr "Zu viele Treffer wurden gefunden."
 
 #: redbot/cogs/audio/core/utilities/playlists.py:309
 msgid "Playlists you can access in this server:"
@@ -402,7 +402,7 @@ msgstr "Playlists können nicht abgerufen werden"
 
 #: redbot/cogs/audio/core/utilities/playlists.py:542
 msgid "I don't have permission to connect and speak in your channel."
-msgstr ""
+msgstr "**Keine Rechte**, deinem Kanal beizutreten/in deinem Kanal zu sprechen!"
 
 #: redbot/cogs/audio/core/utilities/playlists.py:573
 msgid "You must be in the voice channel to use the playlist command."
@@ -410,7 +410,7 @@ msgstr "Du musst dich in dem Sprachkanal befinden, um den Playlist Befehl zu ver
 
 #: redbot/cogs/audio/core/utilities/playlists.py:682
 msgid "the Global"
-msgstr "die Globale"
+msgstr "global"
 
 #: redbot/cogs/audio/core/utilities/playlists.py:682
 msgid "Global"
@@ -438,7 +438,7 @@ msgstr "__Zu viele Songs in der Warteschlange, zeige nur die ersten 500__.\n\n"
 
 #: redbot/cogs/audio/core/utilities/queue.py:57
 msgid "**Currently livestreaming:**\n"
-msgstr "**Aktuell Livestreaming:**\n"
+msgstr "**Momentan Live:**\n"
 
 #: redbot/cogs/audio/core/utilities/queue.py:59
 #: redbot/cogs/audio/core/utilities/queue.py:64

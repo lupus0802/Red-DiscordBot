@@ -29,15 +29,15 @@ msgstr "Der Spotify API Key oder dar Client secret wurden nicht richtig eingeste
 
 #: redbot/cogs/audio/apis/interface.py:351
 msgid "This doesn't seem to be a valid Spotify playlist/album URL or code."
-msgstr "Dies scheint keine gültige Spotify-Playlist/Album-URL oder Spotify-Code zu sein."
+msgstr "**Fehler:** Dies scheint keine gültige Spotify-Playlist/Album-URL oder Spotify-Code zu sein."
 
 #: redbot/cogs/audio/apis/interface.py:477
 msgid "This doesn't seem to be a supported Spotify URL or code."
-msgstr "Dies scheint keine unterstützte Spotify-URL oder Spotify-Code zu sein."
+msgstr "**Fehler:** Dies scheint keine unterstützte Spotify-URL oder Spotify-Code zu sein."
 
 #: redbot/cogs/audio/apis/interface.py:567
 msgid "The connection was reset while loading the playlist."
-msgstr "Die Verbindung wurde zurückgesetzt beim Laden der Playlist."
+msgstr "**Fehler:** Die Verbindung wurde zurückgesetzt."
 
 #: redbot/cogs/audio/apis/interface.py:578
 msgid "Player timeout, skipping remaining tracks."

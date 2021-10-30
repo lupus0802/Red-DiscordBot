@@ -26,7 +26,7 @@ msgstr "Du hast versucht, den Lavalink-Server von Audio auf einer nicht unterst�
 #: redbot/cogs/audio/core/events/dpy.py:70
 msgid "I'm missing permissions in this server, Please address this as soon as possible.\n\n"
 "Expected Permissions:\n"
-msgstr ""
+msgstr "**Fehlende Rechte!** Bitte füge folgende Berechtigungen hinzu: \n"
 
 #: redbot/cogs/audio/core/events/dpy.py:77
 msgid "Enabled"
@@ -46,12 +46,12 @@ msgstr "`{user_input}` ist kein gültiger Wert für `{command}`"
 
 #: redbot/cogs/audio/core/events/dpy.py:142
 msgid "Unable To Parse Argument"
-msgstr "Argument kann nicht analysiert werden"
+msgstr "**Fehler:** Argument kann nicht analysiert werden"
 
 #: redbot/cogs/audio/core/events/dpy.py:154
 #: redbot/cogs/audio/core/events/dpy.py:163
 msgid "Invalid Argument"
-msgstr "Ungültiges Argument"
+msgstr "**Fehler:** Ungültiges Argument"
 
 #: redbot/cogs/audio/core/events/dpy.py:155
 msgid "The argument you gave for `{}` is not valid: I was expecting a `{}`."
@@ -63,7 +63,7 @@ msgstr "Ungültige Umgebung"
 
 #: redbot/cogs/audio/core/events/dpy.py:176
 msgid "Connection to Lavalink has been lost."
-msgstr "Die Verbindung zu Lavalink hat verloren."
+msgstr "**Connection lost:** Die Verbindung zu Lavalink wurde beendet."
 
 #: redbot/cogs/audio/core/events/dpy.py:184
 msgid "No Player Available"
@@ -76,20 +76,20 @@ msgstr "Die Bot ist nicht mit einem Sprachkanal verbunden."
 #: redbot/cogs/audio/core/events/dpy.py:193
 #: redbot/cogs/audio/core/events/lavalink.py:162
 msgid "Unable to Get Track"
-msgstr "Tracks können nicht abgerufen werden"
+msgstr "**Fehler:** Tracks können nicht abgerufen werden"
 
 #: redbot/cogs/audio/core/events/dpy.py:194
 #: redbot/cogs/audio/core/events/lavalink.py:163
 msgid "I'm unable to get a track from Lavalink at the moment, try again in a few minutes."
-msgstr "Ich bin momentan nicht in der Lage, einen Track von Lavalink zu bekommen. Versuchen Sie es in ein paar Minuten erneut."
+msgstr "Ich bin momentan nicht in der Lage, einen Track von meinem Lavalink Server zu bekommen. Versuche es in ein paar Minuten erneut."
 
 #: redbot/cogs/audio/core/events/dpy.py:205
 msgid "There was an issue communicating with Discord."
-msgstr ""
+msgstr "**Fehler:** Verbindung zu Discord verloren."
 
 #: redbot/cogs/audio/core/events/dpy.py:206
 msgid "This error has been reported to the bot owner."
-msgstr ""
+msgstr "Dieser Fehler wurde gemeldet. Danke für dein Verständnis."
 
 #: redbot/cogs/audio/core/events/lavalink.py:154
 msgid "Couldn't get a valid track."
@@ -113,7 +113,7 @@ msgstr "Mehrere Fehler erkannt"
 
 #: redbot/cogs/audio/core/events/lavalink.py:265
 msgid "Closing the audio player due to multiple errors being detected. If this persists, please inform the bot owner as the Audio cog may be temporally unavailable."
-msgstr "Der Audio-Player wird aufgrund mehrer Fehler geschlossen. Sollte das Problem vermehrt auftreten, informiere bitte den Besitzer des Bots, da das Audio-Cog eventuell vorübergehend nicht verfügbar ist."
+msgstr "Der Audio-Player wird aufgrund mehrer Fehler geschlossen. Sollte das Problem vermehrt auftreten, informiere bitte den Besitzer des Bots."
 
 #: redbot/cogs/audio/core/events/lavalink.py:279
 msgid "Track Stuck"
@@ -122,7 +122,7 @@ msgstr "Der Track hat sich aufgehängt"
 #: redbot/cogs/audio/core/events/lavalink.py:280
 msgid "Playback of the song has stopped due to an unexpected error.\n"
 "{error}"
-msgstr ""
+msgstr "Unerwarteter Fehler. Mehr weiß ich nicht."
 
 #: redbot/cogs/audio/core/events/lavalink.py:286
 msgid "Track Error"
