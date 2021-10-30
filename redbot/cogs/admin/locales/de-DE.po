@@ -17,35 +17,35 @@ msgstr ""
 
 #: redbot/cogs/admin/admin.py:18
 msgid "I attempted to do something that Discord denied me permissions for. Your command failed to successfully complete."
-msgstr "Ich habe versucht, etwas zu tun, wofür mir Discord die Erlaubnis verweigert hat. Dein Befehl wurde nicht erfolgreich ausgeführt."
+msgstr "Keine Berechtigung diesen Befehl auszuführen. Diese Aktion wurde von Discord geblockt."
 
 #: redbot/cogs/admin/admin.py:23
 msgid "I can not give {role.name} to {member.display_name} because that role is higher than or equal to my highest role in the Discord hierarchy."
-msgstr "Ich kann die Rolle „{role.name}“ nicht an {member.display_name} vergeben, weil diese Rolle höher oder gleich meiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert. Ich kann die Rolle „{role.name}“ nicht an {member.display_name} vergeben, weil diese Rolle höher oder gleich meiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:29
 msgid "I can not remove {role.name} from {member.display_name} because that role is higher than or equal to my highest role in the Discord hierarchy."
-msgstr "Ich kann {member.display_name} nicht die Rolle „{role.name}“ entziehen, weil diese Rolle höher oder gleich meiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert. Ich kann {member.display_name} nicht die Rolle „{role.name}“ entziehen, weil diese Rolle höher oder gleich meiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:35
 msgid "I can not edit {role.name} because that role is higher than my or equal to highest role in the Discord hierarchy."
-msgstr "Ich kann die Rolle „{role.name}“ nicht bearbeiten, weil diese Rolle höher oder gleich meiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert. Ich kann die Rolle „{role.name}“ nicht bearbeiten, weil diese Rolle höher oder gleich meiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:41
 msgid "I can not let you give {role.name} to {member.display_name} because that role is higher than or equal to your highest role in the Discord hierarchy."
-msgstr "Du darfst, die Rolle „{role.name}“ nicht an {member.display_name} vergeben, weil diese Rolle höher oder gleich deiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert. Du darfst, die Rolle „{role.name}“ nicht an {member.display_name} vergeben, weil diese Rolle höher oder gleich deiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:47
 msgid "I can not let you remove {role.name} from {member.display_name} because that role is higher than or equal to your highest role in the Discord hierarchy."
-msgstr "Du darfst {member.display_name} nicht die Rolle „{role.name}“ entziehen, weil diese Rolle höher oder gleich deiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert. Du darfst {member.display_name} nicht die Rolle „{role.name}“ entziehen, weil diese Rolle höher oder gleich deiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:53
 msgid "I can not let you edit {role.name} because that role is higher than or equal to your highest role in the Discord hierarchy."
-msgstr "Du darfst nicht die Rolle „{role.name}“ bearbeiten, weil diese Rolle höher oder gleich deiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert. Du darfst nicht die Rolle „{role.name}“ bearbeiten, weil diese Rolle höher oder gleich deiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:59
 msgid "I need the \"Manage Roles\" permission to do that."
-msgstr "Ich brauche dafür die Bereichtigung „Rollen verwalten“."
+msgstr "Keine Berechtigung. Ich brauche dafür die Bereichtigung „Rollen verwalten“."
 
 #: redbot/cogs/admin/admin.py:61
 msgid "I am already announcing something. If you would like to make a different announcement please use `{prefix}announce cancel` first."
@@ -54,11 +54,11 @@ msgstr "Ich kündige bereits etwas an. Wenn du eine andere Ankündigung machen w
 #: redbot/cogs/admin/admin.py:71
 #, docstring
 msgid "A collection of server administration utilities."
-msgstr "Eine Sammlung von administrativen Server-Verwaltungsprogrammen."
+msgstr "Eine Sammlung von Administrativen Hilfsmitteln."
 
 #: redbot/cogs/admin/admin.py:164
 msgid "{member.display_name} already has the role {role.name}."
-msgstr "{member.display_name} hat die Rolle „{role.name}“ bereits."
+msgstr "Nicht möglich. {member.display_name} hat die Rolle „{role.name}“ bereits."
 
 #: redbot/cogs/admin/admin.py:184
 msgid "I successfully added {role.name} to {member.display_name}"
@@ -81,7 +81,7 @@ msgid "\n"
 "        "
 msgstr "\n"
 "        Füge einem Mitglied eine Rolle hinzu.\n\n"
-"        Benutze (amerikanische) Anführungszeichen, wenn im Namen Leerzeichen enthalten sind.\n"
+"        Benutze Anführungszeichen, wenn im Namen Leerzeichen enthalten sind.\n"
 "        Wenn keine Person definiert wurde, wird die Rolle dem Autor des Befehls gegeben.\n"
 "        "
 
@@ -94,7 +94,7 @@ msgid "\n"
 "        "
 msgstr "\n"
 "        Füge einem Mitglied eine Rolle hinzu.\n\n"
-"        Benutze (amerikanische) Anführungszeichen, wenn im Namen Leerzeichen enthalten sind.\n"
+"        Benutze Anführungszeichen, wenn im Namen Leerzeichen enthalten sind.\n"
 "        Wenn keine Person definiert wurde, wird die Rolle von dem Autor des Befehls entfernt.\n"
 "        "
 
@@ -178,7 +178,7 @@ msgid "\n"
 "        "
 msgstr "\n"
 "        Ändert den Kanal, in den der Bot Ankündigungen senden wird.\n\n"
-"        Wenn der Kanal freigelassen wird, wird es auf den aktuellen angewendet.\n"
+"        Wenn der Kanal nicht angegeben wird, wird es auf den aktuellen angewendet.\n"
 "        "
 
 #: redbot/cogs/admin/admin.py:368
@@ -235,7 +235,7 @@ msgid "\n"
 "        Lists all available selfroles.\n"
 "        "
 msgstr "\n"
-"Gibt eine Liste verfügbarer selbst auswählbarer Rollen aus.\n"
+"		 Gibt eine Liste verfügbarer selbst auswählbarer Rollen aus.\n"
 "        "
 
 #: redbot/cogs/admin/admin.py:443
@@ -262,7 +262,7 @@ msgstr "\n"
 
 #: redbot/cogs/admin/admin.py:461
 msgid "I cannot let you add {role.name} as a selfrole because that role is higher than or equal to your highest role in the Discord hierarchy."
-msgstr "Du kannst dir nicht die Rolle „{role.name}“ zuweisen, weil diese Rolle höher oder gleich deiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert: Du kannst dir nicht die Rolle „{role.name}“ zuweisen, weil diese Rolle höher oder gleich deiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:469
 msgid "Added."
@@ -285,7 +285,7 @@ msgstr "\n"
 
 #: redbot/cogs/admin/admin.py:483
 msgid "I cannot let you remove {role.name} from being a selfrole because that role is higher than or equal to your highest role in the Discord hierarchy."
-msgstr "Du darfst nicht die Rolle „{role.name}“ von der Liste der selbst hinzufügbaren Rollen entfernen, weil diese Rolle höher oder gleich deiner höchsten Rolle in der Discord Rollen-Hierarchie ist."
+msgstr "Verweigert. Du darfst nicht die Rolle „{role.name}“ von der Liste der selbst hinzufügbaren Rollen entfernen, weil diese Rolle höher oder gleich deiner höchsten Rolle ist."
 
 #: redbot/cogs/admin/admin.py:491
 msgid "Removed."
@@ -302,7 +302,7 @@ msgstr "Der Bot kann nun anderen Servern beitreten."
 
 #: redbot/cogs/admin/admin.py:503
 msgid "The bot is now serverlocked."
-msgstr "Der Bot ist jetzt gesperrt neuen Servern beizutreten."
+msgstr "Der Bot ist jetzt gesperrt und kann keinen neuen Servern beizutreten."
 
 #: redbot/cogs/admin/announcer.py:68
 msgid "I could not announce to the following server: "
