@@ -29,7 +29,7 @@ if sys.platform == "linux":
 
 INTERACTIVE_MODE = not len(sys.argv) > 1  # CLI flags = non-interactive
 
-INTRO = "==========================\nRed Discord Bot - Launcher\n==========================\n"
+INTRO = "==========================\nDiscord BOT - Launcher\n==========================\n"
 
 IS_WINDOWS = os.name == "nt"
 IS_MAC = sys.platform == "darwin"
@@ -47,7 +47,7 @@ def is_venv():
 
 def parse_cli_args():
     parser = argparse.ArgumentParser(
-        description="Red - Discord Bot's launcher (V3)", allow_abbrev=False
+        description="Discord Bot's launcher ", allow_abbrev=False
     )
     instances = load_existing_config()
     parser.add_argument(
@@ -80,10 +80,10 @@ def run_red(selected_instance, autorestart: bool = False, cliflags=None):
 def instance_menu():
     instances = load_existing_config()
     if not instances:
-        print("No instances found!")
+        print("Nichts gefunden!")
         return None
     counter = 0
-    print("Red instance menu\n")
+    print("Menü des BOTs\n")
 
     name_num_map = {}
     for name in list(instances.keys()):

@@ -33,7 +33,7 @@ if not config_dir:
 try:
     config_dir.mkdir(parents=True, exist_ok=True)
 except PermissionError:
-    print("You don't have permission to write to '{}'\nExiting...".format(config_dir))
+    print("Du hast keine Rechte zum Bearbeiten von '{}'\nAbbruch...".format(config_dir))
     sys.exit(1)
 config_file = config_dir / "config.json"
 
@@ -69,9 +69,9 @@ def get_data_dir(instance_name: str):
 
     print()
     print(
-        "We've attempted to figure out a sane default data location which is printed below."
-        " If you don't want to change this default please press [ENTER],"
-        " otherwise input your desired data location."
+        "Wir haben versucht den besten Pfad für die Datenspeicherung zu finden!"
+        " Wenn du diesen benutzen möchtest, drücke bitte [ENTER],"
+        " ansonsten gib deinen Pfad an."
     )
     print()
     print("Default: {}".format(data_path))
@@ -85,8 +85,8 @@ def get_data_dir(instance_name: str):
         exists = data_path.exists()
     except OSError:
         print(
-            "We were unable to check your chosen directory."
-            " Provided path may contain an invalid character."
+            "Dieser Pfad konnte nicht gefunden werden."
+            " Evtl. enthält er einen ungültigen Charackter."
         )
         sys.exit(1)
 
@@ -95,15 +95,15 @@ def get_data_dir(instance_name: str):
             data_path.mkdir(parents=True, exist_ok=True)
         except OSError:
             print(
-                "We were unable to create your chosen directory."
-                " You may need to restart this process with admin"
-                " privileges."
+                "Wir konnten kein Verzeichnis erstellen."
+                " Bitte starte diesen Prozess mit Admin"
+                " Rechten."
             )
             sys.exit(1)
 
-    print("You have chosen {} to be your data directory.".format(data_path))
-    if not click.confirm("Please confirm", default=True):
-        print("Please start the process over.")
+    print("Du möchtest {} als Daten-Pad benutzen.".format(data_path))
+    if not click.confirm("Bitte bestätige", default=True):
+        print("Bitte starte den Prozess neu.")
         sys.exit(0)
     return str(data_path.resolve())
 
@@ -113,7 +113,7 @@ def get_storage_type():
     storage = None
     while storage is None:
         print()
-        print("Please choose your storage backend (if you're unsure, just choose 1).")
+        print("Bitte sage, welche Methode du zum Speichern von Daten benutzen möchtest:")
         print("1. JSON (file storage, requires no database).")
         print("2. PostgreSQL (Requires a database server)")
         storage = input("> ")
@@ -131,20 +131,20 @@ def get_name() -> str:
     name = ""
     while len(name) == 0:
         print(
-            "Please enter a name for your instance,"
-            " it will be used to run your bot from here on out.\n"
-            "This name is case-sensitive and should only include characters"
-            " A-z, numbers, underscores (_) and periods (.)."
+            "Bitte gebe deinen Instanz-Namen ein,"
+            " diesen brauchst du, um den BOT zu starten.\n"
+            "Dieser Name ist case-sensitive und sollte nur"
+            " A-z, Nummern, Unterstriche (_) und Punkte (.) enthalten."
         )
         name = input("> ")
         if re.fullmatch(r"[A-Za-z0-9_\.\-]*", name) is None:
             print(
-                "ERROR: Instance names can only include characters A-z, numbers, "
-                "underscores (_) and periods (.)."
+                "ERROR: Namen können nur A-z, Nummern, "
+                "Unterstriche (_) and Punkte (.) enthalten."
             )
             name = ""
         elif "-" in name and not confirm(
-            "Hyphens (-) in instance names may cause issues. Are you sure you want to continue with this instance name?",
+            "Striche (-) können Probleme verursachen. Bitte bestätige deinen Namen.",
             default=False,
         ):
             name = ""
@@ -160,7 +160,7 @@ def basic_setup():
     """
 
     print(
-        "Hello! Before we begin, we need to gather some initial information for the new instance."
+        "Hallo! Einen moment bitte, das Setup startet gleich.."
     )
     name = get_name()
 
@@ -179,19 +179,19 @@ def basic_setup():
 
     if name in instance_data:
         print(
-            "WARNING: An instance already exists with this name. "
-            "Continuing will overwrite the existing instance config."
+            "Achtung: Dieser Name existiert schon. "
+            "Die alte Config wird überschrieben."
         )
-        if not click.confirm("Are you absolutely certain you want to continue?", default=False):
-            print("Not continuing")
+        if not click.confirm("Bist du dir sicher?", default=False):
+            print("Abbruch...")
             sys.exit(0)
     save_config(name, default_dirs)
 
     print()
     print(
-        "Your basic configuration has been saved. Please run `redbot <name>` to"
-        " continue your setup process and to run the bot.\n\n"
-        "First time? Read the quickstart guide:\n"
+        "Deine Konfiguration wurde gespeichert. Bitte nutze `redbot <name>` um"
+        " das Setup abzuschließen und den BOT zu starten.\n\n"
+        "Diese Docs könnten nützlich sein:\n"
         "https://docs.discord.red/en/stable/getting_started.html"
     )
 
@@ -231,15 +231,15 @@ async def create_backup(instance: str, destination_folder: Path = Path.home()) -
     backend_type = get_current_backend(instance)
     if backend_type != BackendType.JSON:
         await do_migration(backend_type, BackendType.JSON)
-    print("Backing up the instance's data...")
+    print("Erstelle Backup...")
     driver_cls = drivers.get_driver_class()
     await driver_cls.initialize(**data_manager.storage_details())
     backup_fpath = await red_create_backup(destination_folder)
     await driver_cls.teardown()
     if backup_fpath is not None:
-        print(f"A backup of {instance} has been made. It is at {backup_fpath}")
+        print(f"Backup für {instance} wurde erstellt. Gespeichert unter: {backup_fpath}")
     else:
-        print("Creating the backup failed.")
+        print("Das Backup konnte nicht abgeschlossen werden.")
 
 
 async def remove_instance(
@@ -254,13 +254,13 @@ async def remove_instance(
     backend = get_current_backend(instance)
 
     if interactive is True and delete_data is None:
-        msg = "Would you like to delete this instance's data?"
+        msg = "Möchtest du auch alle Daten löschen?"
         if backend != BackendType.JSON:
             msg += " The database server must be running for this to work."
         delete_data = click.confirm(msg, default=False)
 
     if interactive is True and _create_backup is None:
-        msg = "Would you like to make a backup of the data for this instance?"
+        msg = "Möchtest du ein Backup erstellen?"
         if backend != BackendType.JSON:
             msg += " The database server must be running for this to work."
         _create_backup = click.confirm(msg, default=False)
@@ -278,7 +278,7 @@ async def remove_instance(
 
     if interactive is True and remove_datapath is None:
         remove_datapath = click.confirm(
-            "Would you like to delete the instance's entire datapath?", default=False
+            "Möchtest du den gesamten Pfad löschen?", default=False
         )
 
     if remove_datapath is True:
@@ -286,25 +286,25 @@ async def remove_instance(
         safe_delete(data_path)
 
     save_config(instance, {}, remove=True)
-    print("The instance {} has been removed\n".format(instance))
+    print("Instanz {} wurde gelöscht.\n".format(instance))
 
 
 async def remove_instance_interaction():
     if not instance_list:
-        print("No instances have been set up!")
+        print("Es wurden noch keine Instanzen erstellt.!")
         return
 
     print(
-        "You have chosen to remove an instance. The following "
-        "is a list of instances that currently exist:\n"
+        "Du möchtest eine Instanz entfernen. Die folgenden "
+        "Instanzen existieren momentan:\n"
     )
     for instance in instance_data.keys():
         print("{}\n".format(instance))
-    print("Please select one of the above by entering its name")
+    print("Bitte wähle eine von den genannten.")
     selected = input("> ")
 
     if selected not in instance_data.keys():
-        print("That isn't a valid instance!")
+        print("Diese Instanz existiert nicht!")
         return
 
     await remove_instance(selected, interactive=True)
@@ -441,9 +441,9 @@ def run_cli():
     try:
         cli()  # pylint: disable=no-value-for-parameter  # click
     except KeyboardInterrupt:
-        print("Exiting...")
+        print("Beenden...")
     else:
-        print("Exiting...")
+        print("Beenden...")
 
 
 if __name__ == "__main__":
