@@ -223,7 +223,8 @@ msgstr "-)"
 msgid "This bot is an instance of Red, an open source Discord bot (1) created by Twentysix (2) and improved by many (3).\n\n"
 "Red is backed by a passionate community who contributes and creates content for everyone to enjoy. Join us today (4) and help us improve!\n\n"
 "(c) Cog Creators"
-msgstr "Copy Rright Cog Creators"
+msgstr "(c) Cog Creators\n\n"
+"Erstellt von Twentysix."
 
 #: redbot/core/core_commands.py:494
 msgid "Instance owned by team: [{owner}]\n"
